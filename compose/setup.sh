@@ -1,16 +1,13 @@
 #!/bin/bash
 
 # Create data directory
-mkdir compose|| true
-
-# Create data directory
-mkdir data || true
+mkdir ../data || true
 
 # Create backup directory
-mkdir backup || true
+mkdir ../backup || true
 
 #Create backup binaries directory
-mkdir bin || true
+mkdir ../bin || true
 
 # Create database
 echo "Creating database..." 
