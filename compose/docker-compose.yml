@@ -2,7 +2,7 @@ version: '3'
 
 services:
   dbclient:
-     container_name: ${CONTAINER_DB_NAME}
+     #container_name: ${CONTAINER_DB_NAME}
      image: mariadb:latest
      networks:
        - db-net
@@ -13,7 +13,7 @@ services:
        MYSQL_PASSWORD: ${MYSQL_PASSWORD}
 
   wordpress:
-     container_name: ${CONTAINER_WP_NAME}
+     #container_name: ${CONTAINER_WP_NAME}
      image: wordpress:latest
      restart: unless-stopped
      volumes:
@@ -35,7 +35,7 @@ services:
 
   wpcli:
      image: tatemz/wp-cli
-     container_name: ${CONTAINER_WPCLI_NAME}
+     #container_name: ${CONTAINER_WPCLI_NAME}
      volumes:
        - ${WP_CORE}:/var/www/html
        - ${WP_CONTENT}:/var/www/html/wp-content
